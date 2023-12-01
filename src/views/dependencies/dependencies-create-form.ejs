@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--ESTILOS COMUNES A TODAS LAS SECCIONES DE LA APLICACION-->
+        <%- include ('../partials/common-styles-links.ejs') %>
+    <!---->
+
+    <link rel="stylesheet" href="/css/dependencies/dependencies-create-form-styles.css">
+
+    <!--SCRIPTS COMUNES A TODAS LAS SECCIONES DE LA APLICACION-->
+        <%- include ('../partials/common-script-links.ejs') %>
+    <!---->
+    
+
+    <title>Alta de dependencias</title>
+</head>
+<body>
+    <!--INICIO DEL HEADER-->
+        <%- include ('../partials/header.ejs') %>
+    <!--FIN DEL HEADER-->
+
+    <!--INICIO DE LA SECCION DE LOS ACCESOS DIRECTOS A FUNCIONALIDADES MAS USADAS-->
+        <%- include ('../partials/shortcut.ejs') %>
+    <!--FIN DE LA SECCION DE LOS ACCESOS DIRECTOS A FUNCIONALIDADES MAS USADAS-->
+   
+    <main class="main">
+        <h2 class="tittle">ALTA DE DEPENDENCIA</h2>
+
+        <form action="/dependencies/store" method="post">
+            <div class="form-div">
+                <label for="name" class="form-label">Nombre: </label>
+                <input type="text" name="name" id="name" class="form-input">
+            </div>
+            <div class="form-div">
+                <label for="code" class="form-label">Código:</label>
+                <input type="text" name="code" id="code" class="form-input">
+            </div>
+            <div class="form-div">
+                <label for="sub-code" class="form-label">Sub-Código: </label>
+                <input type="text" name="subCode" id="sub-code" class="form-input">
+            </div>
+            <div class="form-div">
+                <label for="email" class="form-label">E-Mail:</label>
+                <input type="email" name="email" id="email" class="form-input">
+            </div>
+
+            <div class="form-div">
+                <label for="floor" class="form-label">Piso: </label>
+                <select name="floor" id="floor" class="form-input">
+                    <option value="-1">Subsuelo</option>
+                    <option value="0">Planta Baja</option>
+                    <option value="1">1er piso</option>
+                    <option value="2">2do piso</option>
+                    <option value="3">3er piso</option>
+                    <option value="4">4to piso</option>
+                    <option value="5">5to piso</option>
+                    <option value="6">6to piso</option>
+                    <option value="7">7mo piso</option>
+                    <option value="8">8vo piso</option>
+                    <option value="9">9no piso</option>
+                </select>
+            </div>
+            <div class="form-div">
+                <label for="side" class="form-label">Lado:</label>
+                <select name="side" id="side" class="form-input">
+                    <option value="rio">Río</option>
+                    <option value="retiro">Retiro</option>
+                </select>
+            </div>
+            <div class="form-buttons">
+                <button type="submit">CREAR</button>
+                <button type="reset">BORRAR</button>
+            </div>
+
+        </form>
+    </main>
+
+    <!--INICIO DEL FOOTER-->
+        <%- include ('../partials/footer.ejs') %>
+    <!--FIN DEL FOOTER-->
+</body>
+</html>

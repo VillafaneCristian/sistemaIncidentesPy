@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--ESTILOS COMUNES A TODAS LAS SECCIONES DE LA APLICACION-->
+    <%- include ('../partials/common-styles-links.ejs') %>
+    <!---->
+
+    <link rel="stylesheet" href="/css/equipment/equipment-create-form-styles.css">
+
+    <!--SCRIPTS COMUNES A TODAS LAS SECCIONES DE LA APLICACION-->
+        <%- include ('../partials/common-script-links.ejs') %>
+    <!---->
+
+    <title>Alta de equipamiento</title>
+</head>
+<body>
+    <!--INICIO DEL HEADER-->
+        <%- include ('../partials/header.ejs') %>
+    <!--FIN DEL HEADER-->
+
+    <!--INICIO DE LA SECCION DE LOS ACCESOS DIRECTOS A FUNCIONALIDADES MAS USADAS-->
+        <%- include ('../partials/shortcut.ejs') %>
+    <!--FIN DE LA SECCION DE LOS ACCESOS DIRECTOS A FUNCIONALIDADES MAS USADAS-->
+
+    <main class="main">
+        <h2 class="tittle">ALTA DE EQUIPAMIENTO</h2>
+
+        <form action="">
+            <div class="form-div">
+                <label for="equipment_kind" class="form-label">Tipo de equipamiento:</label>
+                <select name="equipment_kind" id="equipment_kind" class="form-input">
+                    <option value="1">CPU</option>
+                    <option value="2">Monitor</option>
+                    <option value="3">Notebook</option>
+                    <option value="4">Impresora</option>
+                    <option value="5">Escaner</option>
+                </select>
+            </div>
+            <div class="form-div">
+                <label for="mark" class="form-label">Marca:</label>
+                <select name="mark" id="mark" class="form-input">
+                    <option value="">Lenovo</option>
+                    <option value="">Dell</option>
+                    <option value="">Bangho</option>
+                    <option value="">Sansei</option>
+                    <option value="">Hewllet Packard</option>
+                    <option value="">Lexmark</option>
+                    <option value="">Samsung</option>
+                    <option value="">Kodak</option>
+                </select>
+            </div>
+            <div class="form-div">
+                <label for="model" class="form-label">Modelo:</label>
+                <select name="model" id="model" class="form-input">
+                    <option value="">Optima 1793</option>
+                    <option value="">BES I5</option>
+                    <option value="">BES 350</option>
+                    <option value="">9485-A21</option>
+                </select>
+            </div>
+            <div class="form-div">
+                <label for="serial_number" class="form-label">Número de serie:</label>
+                <input type="text" name="serial_number" id="serial_number" class="form-input">
+            </div>
+            <div class="form-div">
+                <label for="dependence_code" class="form-label">Dependencia:</label>
+                <select name="dependence_code" id="dependence_code" class="form-input">
+                    <option value="f01">Juzgado 1 secretaria 1</option>
+                </select>
+            </div>
+            <div class="form-div">
+                <label for="hostname" class="form-label">Nombre de equipo:</label>
+                <input type="text" name="hostname" id="hostname" class="form-input">
+            </div>
+            <div class="form-div">
+                <label for="ip_address" class="form-label">Direccion IPv4:</label>
+                <input type="text" name="ip_address" id="ip_address" class="form-input">
+            </div>
+            <div class="form-div">
+                <label for="processor" class="form-label">Procesador:</label>
+                <select name="processor" id="processor" class="form-input">
+                    <option value="">AMD FX4100</option>
+                    <option value="">INTEL I5</option>
+                </select>
+            </div>
+            <div class="form-div">
+                <label for="memory" class="form-label">Memoria:</label>
+                <select name="memory" id="memory" class="form-input">
+                    <option value="">DDR 2 2GB</option>
+                    <option value="">DDR 3 4GB</option>
+                    <option value="">DDR 3 8GB</option>
+                    <option value="">DDR 4 4GB</option>
+                    <option value="">DDR 4 8GB</option>
+                    <option value="">DDR 4 16GB</option>
+                </select>
+            </div>
+            <div class="form-div">
+                <label for="hard_disk_kind" class="form-label">Tipo de Disco Rigido:</label>
+                <select name="hard_disk_kind" id="hard_disk_kind" class="form-input">
+                    <option value="">HDD</option>
+                    <option value="">SSD</option>
+                </select>
+            </div>
+            <div class="form-div">
+                <label for="hard_disk_capacity" class="form-label">Capacidad del Disco Rígido:</label>
+                <select name="hard_disk_capacity" id="hard_disk_capacity" class="form-input">
+                    <option value="">80 GB</option>
+                    <option value="">160 GB</option>
+                    <option value="">320 GB</option>
+                    <option value="">500 GB</option>
+                    <option value="">1000 GB</option>
+                    <option value="">2000 GB</option>
+                </select>
+            </div>
+            <div class="form-div">
+                <label for="state" class="form-label">Estado: </label>
+                <select name="state" id="state" class="form-input">
+                    <option value="">Stock de instalacion</option>
+                    <option value="">Dada de baja</option>
+                    <option value="">Instalada</option>
+                </select>
+            </div>
+            <div class="form-div">
+                <label for="comments">Comentarios:</label>
+                <textarea name="comments" id="comments" cols="30" rows="10" class="form-input"></textarea>
+            </div>
+        </form>
+
+    </main>
+
+    <!--INICIO DEL FOOTER-->
+        <%- include ('../partials/footer.ejs') %>
+    <!--FIN DEL FOOTER-->
+
+</body>
+</html>

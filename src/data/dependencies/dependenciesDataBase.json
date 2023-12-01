@@ -1,0 +1,83 @@
+[
+  {
+    "id": "e4b80ca3-21f2-4592-adb2-7146fff51a27",
+    "name": "Tribunal Oral en lo Penal Económico N°1",
+    "code": "PT1",
+    "subCode": "",
+    "email": "topenalec1@pjn.gov.ar",
+    "floor": "6",
+    "side": "retiro"
+  },
+  {
+    "id": "2c7b4460-e129-4a12-8a7f-c2d6ef03e640",
+    "name": "Tribunal Oral en lo Penal Económico N°2",
+    "code": "PT2",
+    "subCode": "",
+    "email": "topenalec2@pjn.gov.ar",
+    "floor": "7",
+    "side": "rio"
+  },
+  {
+    "id": "3a37c606-ec7d-4a84-8811-b81ce3a52e17",
+    "name": "Tribunal Oral en lo Penal Económico N°3",
+    "code": "PT3",
+    "subCode": "",
+    "email": "topenalec3@pjn.gov.ar",
+    "floor": "7",
+    "side": "rio"
+  },
+  {
+    "id": "c1569c2d-8fb3-483d-931a-32c4f52edd59",
+    "name": "Tribunal Oral en lo Criminal Federal N°1",
+    "code": "FT1",
+    "subCode": "",
+    "email": "tocrimfed1@pjn.gov.ar",
+    "floor": "6",
+    "side": "retiro"
+  },
+  {
+    "id": "af43bc75-059b-4714-bea0-a279b233e89a",
+    "name": "Tribunal Oral en lo Criminal Federal N°2",
+    "code": "FT2",
+    "subCode": "",
+    "email": "tocrimfed2@pjn.gov.ar",
+    "floor": "6",
+    "side": "retiro"
+  },
+  {
+    "id": "53dedfd1-991c-4b72-8b16-e2026cbeaa53",
+    "name": "Tribunal Oral en lo Criminal Federal N°3",
+    "code": "FT3",
+    "subCode": "",
+    "email": "tocrimfed3@pjn.gov.ar",
+    "floor": "7",
+    "side": "retiro"
+  },
+  {
+    "id": "a9270d65-6b49-463b-ba4c-a6b12bbe8f76",
+    "name": "Tribunal Oral en lo Criminal Federal N°4",
+    "code": "FT4",
+    "subCode": "",
+    "email": "tocrimfed4@pjn.gov.ar",
+    "floor": "6",
+    "side": "rio"
+  },
+  {
+    "id": "97ef495e-8091-4c20-bba3-1c6462dffb13",
+    "name": "Tribunal Oral en lo Criminal Federal N°5",
+    "code": "FT5",
+    "subCode": "",
+    "email": "tocrimfed5@pjn.gov.ar",
+    "floor": "6",
+    "side": "retiro"
+  },
+  {
+    "id": "594b09c7-3106-4478-af9e-f0812cbc6a0c",
+    "name": "Tribunal Oral en lo Criminal Federal N°6",
+    "code": "FT6",
+    "subCode": "",
+    "email": "tocrimfed6@pjn.gov.ar",
+    "floor": "6",
+    "side": "rio"
+  }
+]

@@ -1,0 +1,37 @@
+
+.tittle{
+    text-align: center;
+}
+
+form{
+    max-width: 768px;
+    margin: auto;
+}
+
+.form-div{
+    margin: 15px;
+}
+
+.form-label{
+    display: block;
+}
+
+.form-input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #A0E9FF;
+}
+
+.form-buttons{
+    text-align: center;
+}
+
+button{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #39A7FF;
+    color: #FFFFFF;
+}

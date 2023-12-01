@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.shortcut-section{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.shortcut-section-article{
+    width: 150px;
+    border: 1px solid #000000;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.shortcut-section-article img{
+    width: 100%;
+}
+
+.shortcut-section-article p{
+    text-align: center;
+}

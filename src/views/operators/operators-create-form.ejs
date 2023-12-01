@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--ESTILOS COMUNES A TODAS LAS SECCIONES DE LA APLICACION-->
+        <%- include ('../partials/common-styles-links.ejs') %>
+    <!---->
+
+    <link rel="stylesheet" href="/css/operators/operators-create-form-styles.css">
+
+    <!--SCRIPTS COMUNES A TODAS LAS SECCIONES DE LA APLICACION-->
+    <%- include ('../partials/common-script-links.ejs') %>
+    <!---->
+
+    <title>Alta de Operador</title>
+</head>
+<body>
+    <!--INICIO DEL HEADER-->
+    <%- include ('../partials/header.ejs') %>
+    <!--FIN DEL HEADER-->
+
+    <!--INICIO DE LA SECCION DE LOS ACCESOS DIRECTOS A FUNCIONALIDADES MAS USADAS-->
+        <%- include ('../partials/shortcut.ejs') %>
+    <!--FIN DE LA SECCION DE LOS ACCESOS DIRECTOS A FUNCIONALIDADES MAS USADAS-->
+
+    <main class="main">
+        <h2 class="tittle">ALTA DE OPERADOR</h2>
+
+        <form action="">
+            <div class="form-div">
+                <label for="first_name" class="form-label">Nombre:</label>
+                <input type="text" name="first_name" id="first-name" class="form-input">
+            </div>
+            <div class="form-div">
+                <label for="last_name" class="form-label">Apellido:</label>
+                <input type="text" name="last_name" id="last-name" class="form-input">
+            </div>
+            <div class="form-div">
+                <label for="cuil" class="form-label">CUIL:</label>
+                <input type="text" name="cuil" id="cuil" class="form-input">
+            </div>
+            <div class="form-div">
+                <label for="email" class="form-label">E-Mail:</label>
+                <input type="text" name="email" id="email" class="form-input">
+            </div>
+            <div class="form-div">
+                <label for="password" class="form-label">Password:</label>
+                <input type="text" name="password" id="password" class="form-input">
+            </div>
+            <div class="form-buttons">
+                <button type="submit">CREAR</button>
+                <button type="reset">BORRAR</button>
+            </div>
+        </form>
+    </main>
+
+    <!--INICIO DEL FOOTER-->
+    <%- include ('../partials/footer.ejs') %>
+    <!--FIN DEL FOOTER-->
+    
+</body>
+</html>
