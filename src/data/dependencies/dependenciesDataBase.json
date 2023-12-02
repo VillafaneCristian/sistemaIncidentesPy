@@ -79,5 +79,41 @@
     "email": "tocrimfed6@pjn.gov.ar",
     "floor": "6",
     "side": "rio"
+  },
+  {
+    "id": "c67726c1-3d01-44fa-8e64-f2a106f9eba6",
+    "name": "Tribunal Oral en loCriminal Federal Nº8",
+    "code": "FT8",
+    "subCode": "",
+    "email": "tocrimfed8@pjn.gov.ar",
+    "floor": "6",
+    "side": "rio"
+  },
+  {
+    "id": "f01a8c6f-9495-4c17-938b-2e73a6551c03",
+    "name": "Tribunal Oral de Menores Nº1",
+    "code": "MT1",
+    "subCode": "",
+    "email": "tomenores1@pjn.gov.ar",
+    "floor": "7",
+    "side": "retiro"
+  },
+  {
+    "id": "c3d2296d-6db2-4c51-a69e-c4a79759e187",
+    "name": "Tribunal Oral de Menores Nº2",
+    "code": "MT2",
+    "subCode": "",
+    "email": "tomenores2@pjn.gov.ar",
+    "floor": "8",
+    "side": "retiro"
+  },
+  {
+    "id": "1154c0e2-9f59-458c-8bad-a67c61101108",
+    "name": "Tribunal Oral de Menores Nº3",
+    "code": "MT3",
+    "subCode": "",
+    "email": "tomenores3@pjn.gov.ar",
+    "floor": "8",
+    "side": "retiro"
   }
 ]
