@@ -15,7 +15,12 @@ const dependencies = {
     },
     
     findAllDependencies: function(){
-        return this.getDependencies();
+        return this.getAllDependencies();
+    },
+
+    findById: function(id){
+        const dependencie = this.getAllDependencies().find((dependencie)=>dependencie.id==id);
+        return dependencie;  
     },
     
     create: function (dependencie) {
@@ -29,6 +34,8 @@ const dependencies = {
         this.saveAllDependencies(dependencies);
     }
 }
+
+
 
 module.exports = dependencies;
 

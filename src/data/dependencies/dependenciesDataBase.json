@@ -115,5 +115,14 @@
     "email": "tomenores3@pjn.gov.ar",
     "floor": "8",
     "side": "retiro"
+  },
+  {
+    "id": "e9018502-54bc-433c-9025-e54ac3772eec",
+    "name": "Juzgado Criminal y Correccional Federal N°1 - Secretaria N°1",
+    "code": "F01",
+    "subCode": "Sec1",
+    "email": "jncrimcorrfed1.sec1@pjn.gov.ar",
+    "floor": "3",
+    "side": "rio"
   }
 ]

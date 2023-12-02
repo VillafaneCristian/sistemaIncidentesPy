@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--ESTILOS COMUNES A TODAS LAS SECCIONES DE LA APLICACION-->
+        <%- include ('../partials/common-styles-links.ejs') %>
+    <!---->
+
+    <link rel="stylesheet" href="/css/dependencies/dependencies-show-all-styles.css">
+
+    <!--SCRIPTS COMUNES A TODAS LAS SECCIONES DE LA APLICACION-->
+        <%- include ('../partials/common-script-links.ejs') %>
+    <!---->
+
+    <title>Listar Dependencias</title>
+</head>
+<body>
+    <!--INICIO DEL HEADER-->
+        <%- include ('../partials/header.ejs') %>
+    <!--FIN DEL HEADER-->
+
+    <!--INICIO DE LA SECCION DE LOS ACCESOS DIRECTOS A FUNCIONALIDADES MAS USADAS-->
+        <%- include ('../partials/shortcut.ejs') %>
+    <!--FIN DE LA SECCION DE LOS ACCESOS DIRECTOS A FUNCIONALIDADES MAS USADAS-->
+
+    <main class="main">
+        
+        <h2 class="tittle">LISTADO DE TODAS LAS DEPENDENCIAS</h2>
+
+        <table>
+            <tr>
+                <th class="table-column-Dependence">Dependencia</th>
+                <th class="table-column-code">Codigo</th>
+                <th class="table-column-subCode">SubCodigo</th>
+                <th class="table-column-email">E-mail</th>
+                <th class="table-column-floor">Piso</th>
+                <th class="table-column-side">Lado</th>
+                <th class="table-column-edit">Editar</th>
+                <th class="table-column-delete">Eliminar</th>
+            </tr>
+
+            <% dependencies.forEach (dependencie => { %>
+                <tr> 
+                    <td class="table-column-Dependence"><%= dependencie.name %></td>
+                    <td class="table-column-code"><%= dependencie.code %></td>
+                    <td class="table-column-subCode"><%= dependencie.subCode %></td>
+                    <td class="table-column-email"><%= dependencie.email %></td>
+                    <td class="table-column-floor"><%= dependencie.floor %></td>
+                    <td class="table-column-side"><%= dependencie.side %></td>
+                    <td class="table-column-edit"><a class="button-edit" href="/dependencies/edit/<%= dependencie.id%>"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                    <td class="table-column-delete">
+                        <form action="">
+                            <button class="button-delete"><i class="fa-solid fa-trash-can"></i></button>
+                        </form>
+                    </td>
+                </tr>
+            <% }) %>
+
+        </table>
+
+    </main>
+
+    <!--INICIO DEL FOOTER-->
+        <%- include ('../partials/footer.ejs') %>
+    <!--FIN DEL FOOTER-->
+
+</body>
+</html>

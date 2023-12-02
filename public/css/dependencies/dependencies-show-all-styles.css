@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+
+table{
+    width: 90%;
+    margin: auto;
+}
+
+td, th{
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #00A9FF;
+}
+
+.table-column-edit, .table-column-delete{
+    text-align: center;
+}
+
+.button-edit{
+    color: #00A9FF;
+    font-size: 25px;
+}
+
+.button-delete{
+    background-color: #FFFFFF;
+    color: #00A9FF;
+    font-size: 25px;
+}
+
+@media (max-width: 769px){
+    
+    .table-column-email, .table-column-code, .table-column-subCode{
+        display:none;
+    }
+}
+
+@media (max-width: 481px){
+
+    .table-column-email{
+        display: none;
+    }
+}
+
+
+
