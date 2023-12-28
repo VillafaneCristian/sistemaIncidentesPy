@@ -4,7 +4,7 @@
     "name": "Tribunal Oral en lo Penal Económico N°1",
     "code": "PT1",
     "subCode": "",
-    "email": "topenalec1@pjn.gov.ar",
+    "email": "topenalec1asdasdasdasdasdas@pjn.gov.ar",
     "floor": "6",
     "side": "retiro"
   },
@@ -20,19 +20,19 @@
   {
     "id": "3a37c606-ec7d-4a84-8811-b81ce3a52e17",
     "name": "Tribunal Oral en lo Penal Económico N°3",
-    "code": "PT3",
+    "code": "PT355555555555",
     "subCode": "",
     "email": "topenalec3@pjn.gov.ar",
-    "floor": "7",
-    "side": "rio"
+    "floor": "9",
+    "side": "retiro"
   },
   {
     "id": "c1569c2d-8fb3-483d-931a-32c4f52edd59",
     "name": "Tribunal Oral en lo Criminal Federal N°1",
     "code": "FT1",
-    "subCode": "",
+    "subCode": "nueva",
     "email": "tocrimfed1@pjn.gov.ar",
-    "floor": "6",
+    "floor": "9",
     "side": "retiro"
   },
   {
@@ -124,5 +124,23 @@
     "email": "jncrimcorrfed1.sec1@pjn.gov.ar",
     "floor": "3",
     "side": "rio"
+  },
+  {
+    "id": "c7bbeff2-0461-4a3b-8697-379a4be6f910",
+    "name": "vocalia 1",
+    "code": "v01",
+    "subCode": "",
+    "email": "v01@pjn.gov.ar",
+    "floor": "9",
+    "side": "retiro"
+  },
+  {
+    "id": "7e70c460-5014-467b-bcc5-a3aebc51659c",
+    "name": "vocalia 2",
+    "code": "v02",
+    "subCode": "",
+    "email": "vocalia2@pjn.gov.ar",
+    "floor": "3",
+    "side": "retiro"
   }
 ]

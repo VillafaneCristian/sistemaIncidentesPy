@@ -10,6 +10,10 @@ const dependenciesServices = {
 
     getDependencieById: function(id){
         return db.dependencies.findById(id);
+    },
+
+    updateDependencie: function(id,dependencie){
+        db.dependencies.update(id,dependencie); 
     }
 }
 

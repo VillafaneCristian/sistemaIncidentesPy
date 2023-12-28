@@ -32,6 +32,15 @@ const dependencies = {
         };
         dependencies.push(newDependencie);
         this.saveAllDependencies(dependencies);
+    },
+
+    update: function(id,dependencie){
+        console.log(`Updating dependencie ${dependencie.name}`);
+        const dependencies = this.getAllDependencies();
+        const dependencieToEdit= dependencies.find((dependencie)=>dependencie.id==id);
+        Object.assign(dependencieToEdit,dependencie);
+        this.saveAllDependencies(dependencies);
+        return dependencie;
     }
 }
 

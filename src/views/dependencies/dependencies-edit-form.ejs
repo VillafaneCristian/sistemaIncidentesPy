@@ -28,47 +28,48 @@
     <!--FIN DE LA SECCION DE LOS ACCESOS DIRECTOS A FUNCIONALIDADES MAS USADAS-->
    
     <main class="main">
-        <h2 class="tittle">EDICION de  <%= dependencie.name %> </h2>
+        <h2 class="tittle">EDITANDO LA DEPENDENCIA: <%= dependencie.name %> </h2>
 
         <form action="/dependencies/<%=dependencie.id%>?_method=put" method="post">
             <div class="form-div">
                 <label for="name" class="form-label">Nombre: </label>
-                <input type="text" name="name" id="name" class="form-input">
+                <input type="text" name="name" id="name" class="form-input" value="<%= dependencie.name %>">
             </div>
             <div class="form-div">
                 <label for="code" class="form-label">Código:</label>
-                <input type="text" name="code" id="code" class="form-input">
+                <input type="text" name="code" id="code" class="form-input" value="<%= dependencie.code %>">
             </div>
             <div class="form-div">
                 <label for="sub-code" class="form-label">Sub-Código: </label>
-                <input type="text" name="subCode" id="sub-code" class="form-input">
+                <input type="text" name="subCode" id="sub-code" class="form-input" value="<%= dependencie.subCode %>">
             </div>
             <div class="form-div">
                 <label for="email" class="form-label">E-Mail:</label>
-                <input type="email" name="email" id="email" class="form-input">
+                <input type="email" name="email" id="email" class="form-input" value="<%= dependencie.email %>">
             </div>
 
             <div class="form-div">
                 <label for="floor" class="form-label">Piso: </label>
                 <select name="floor" id="floor" class="form-input">
-                    <option value="-1">Subsuelo</option>
-                    <option value="0">Planta Baja</option>
-                    <option value="1">1er piso</option>
-                    <option value="2">2do piso</option>
-                    <option value="3">3er piso</option>
-                    <option value="4">4to piso</option>
-                    <option value="5">5to piso</option>
-                    <option value="6">6to piso</option>
-                    <option value="7">7mo piso</option>
-                    <option value="8">8vo piso</option>
-                    <option value="9">9no piso</option>
+                    <option value="-1" <%= dependencie.floor ? "selected" : "" %>>Subsuelo</option> <!--revizar para que tome los vaores de los selects que no esta funcionando-->
+                    <option value="0" <%= dependencie.floor ? "selected" : "" %>>Planta Baja</option>
+                    <option value="1" <%= dependencie.floor ? "selected" : "" %>>1er piso</option>
+                    <option value="2" <%= dependencie.floor ? "selected" : "" %>>2do piso</option>
+                    <option value="3" <%= dependencie.floor ? "selected" : "" %>>3er piso</option>
+                    <option value="4" <%= dependencie.floor ? "selected" : "" %>>4to piso</option>
+                    <option value="5" <%= dependencie.floor ? "selected" : "" %>>5to piso</option>
+                    <option value="6" <%= dependencie.floor ? "selected" : "" %>>6to piso</option>
+                    <option value="7" <%= dependencie.floor ? "selected" : "" %>>7mo piso</option>
+                    <option value="8" <%= dependencie.floor ? "selected" : "" %>>8vo piso</option>
+                    <option value="9" <%= dependencie.floor ? "selected" : "" %>>9no piso</option>
                 </select>
             </div>
             <div class="form-div">
                 <label for="side" class="form-label">Lado:</label>
                 <select name="side" id="side" class="form-input">
-                    <option value="rio">Río</option>
-                    <option value="retiro">Retiro</option>
+                    <option value="">Elegí</option>
+                    <option value="<%= dependencie.side ? "selected" : "" %>">Río</option>
+                    <option value="retiro" <%= dependencie.side ? "selected" : "" %>>Retiro</option>
                 </select>
             </div>
             <div class="form-buttons">

@@ -26,7 +26,10 @@ const dependenciesController = {
         res.render('./dependencies/dependencies-edit-form.ejs',{dependencie});
     }, 
     update:function(req,res){
-        res.send('viaje por put');
+        const dependencie = req.body;
+        const id = req.params.id;
+        dependenciesService.updateDependencie(id,dependencie);
+        res.redirect('/');
     }
 
 };
