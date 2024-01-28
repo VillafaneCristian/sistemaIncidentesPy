@@ -13,6 +13,7 @@ const mainController = require ('../controllers/mainController.js');
 // ****************** main routes ********************** //
 router.get('/', mainController.index);
 
+
 // ****************** dependencies routes ************** //
 const dependenciesRouter = require ('./dependencies.js');
 router.use('/dependencies',dependenciesRouter);
@@ -28,5 +29,9 @@ router.use('/operators',operatorsRouter);
 // ***************** equipment routes ***************** //
 const equipmentRouter = require ('./equipment.js');
 router.use('/equipment',equipmentRouter);
+
+// ***************** incidentes router **************** //
+const incidentsRoutes = require ('../routes/incidents.js');
+router.use('/incidents', incidentsRoutes); 
 
 module.exports = router; 

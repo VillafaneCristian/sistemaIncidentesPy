@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--ESTILOS COMUNES A TODAS LAS SECCIONES DE LA APLICACION-->
+        <%- include ('../partials/common-styles-links.ejs') %>
+    <!---->
+
+    <link rel="stylesheet" href="/css/users/users-create-form-styles.css">
+
+    <title>EDICION DE USUARIO</title>
+</head>
+<body>
+    <!--INICIO DEL HEADER-->
+        <%- include ('../partials/header.ejs') %>
+    <!--FIN DEL HEADER-->
+
+    <!--INICIO DE LA SECCION DE LOS ACCESOS DIRECTOS A FUNCIONALIDADES MAS USADAS-->
+        <%- include ('../partials/shortcut.ejs') %>
+    <!--FIN DE LA SECCION DE LOS ACCESOS DIRECTOS A FUNCIONALIDADES MAS USADAS-->
+
+    <!--SCRIPTS COMUNES A TODAS LAS SECCIONES DE LA APLICACION-->
+    <%- include ('../partials/common-script-links.ejs') %>
+    <!---->
+
+    <main class="main">
+        <h2 class="tittle">EDICION DE USUARIO</h2>
+        <form action="/users/<%= user.id %>?_method=put" method="post">
+            <div class="form-div">
+                <label for="last_name" class="form-label">Nombre: </label>
+                <input type="text" name="first_name" id="first_name" class="form-input" value="<%= user.first_name %>">
+            </div>
+            <div class="form-div">
+                <label for="last_name" class="form-label">Apellido: </label>
+                <input type="text" name="last_name" id="last_name" class="form-input" value="<%= user.last_name %>">
+            </div>
+            <div class="form-div">
+                <label for="cuil" class="form-label">CUIL:</label>
+                <input type="text" name="cuil" id="cuil" class="form-input" value="<%= user.cuil %>">
+            </div>
+            <div class="form-div">
+                <label for="email" class="form-label">E-Mail</label>
+                <input type="text" name="email" id="email" class="form-input" value="<%= user.email %>">
+            </div>
+            <div class="form-div">
+                <label for="dependencie" class="form-label">Dependencia:</label>
+                <select name="dependencie" id="dependencie" class="form-input">
+                    <option value="">Elija una opción</option>
+                    
+                    <% allDependencies.forEach((oneDependencie)=>{ %>
+                        <option value= "<%= oneDependencie.id %>"
+                        
+                            <%= user && user.dependencie === oneDependencie.id ? "selected" : "" %>    
+
+
+                            > <%= oneDependencie.name %>
+                    </option>
+                    <% }) %>
+                </select>
+            </div>
+            <div class="form-buttons">
+                <button type="submit">EDITAR</button>
+            </div>
+
+        </form>
+
+    </main>
+    <!--INICIO DEL FOOTER-->
+        <%- include ('../partials/footer.ejs') %>
+    <!--FIN DEL FOOTER-->
+
+</body>
+</html>

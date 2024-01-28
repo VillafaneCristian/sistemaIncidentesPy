@@ -1,51 +1,61 @@
 const fs = require ('fs');
 const path = require ('path');
-const {v4:uuidv4} = require ('uuid');
+const {v4 : uuidv4} = require ('uuid');
 
 const dependencies = {
-    dependenciesFilePath: path.join(__dirname,'./dependenciesDataBase.json'),
-   
-    getAllDependencies: function(){
-        const dependencies = JSON.parse(fs.readFileSync(this.dependenciesFilePath,'utf-8'));
-        return dependencies;
-    },
-    
-    saveAllDependencies: function(dependencies){
-        fs.writeFileSync(this.dependenciesFilePath,JSON.stringify(dependencies,null,2));
-    },
-    
-    findAllDependencies: function(){
-        return this.getAllDependencies();
+    fileName: path.join(__dirname,'./dependenciesDataBase.json'),
+
+    getData: function(){
+        return JSON.parse(fs.readFileSync(this.fileName,'utf-8'));
     },
 
-    findById: function(id){
-        const dependencie = this.getAllDependencies().find((dependencie)=>dependencie.id==id);
-        return dependencie;  
+    saveData: function(dependencieData){
+        fs.writeFileSync(this.fileName,JSON.stringify(dependencieData,null,' '));
     },
+
+    findAll: function(){
+        return this.getData();
+    },
+
     
-    create: function (dependencie) {
-        console.log(`Creating dependencie ${dependencie.name}`);
-        const dependencies = this.getAllDependencies();
+    findByPk: function(id){
+        const allDependencies = this.findAll();
+        const dependencieFound = allDependencies.find(oneDependencie => oneDependencie.id === id); 
+        return dependencieFound;
+    },
+
+    findByField: function(field,text){
+        const allDependencies = this.findAll();
+        const dependencieFound = allDependencies.find(oneDependencie => oneDependencie[field]===text);
+        return dependencieFound;
+    },
+
+    store: function(dependencieData){
+        console.log(`Creating Dependencie ${dependencieData.name}`);
+        const allDependencies = this.findAll();
         const newDependencie = {
             id: uuidv4(),
-            ...dependencie,
-        };
-        dependencies.push(newDependencie);
-        this.saveAllDependencies(dependencies);
+            ...dependencieData
+        }
+        allDependencies.push(newDependencie);
+        this.saveData(allDependencies);
     },
 
-    update: function(id,dependencie){
-        console.log(`Updating dependencie ${dependencie.name}`);
-        const dependencies = this.getAllDependencies();
-        const dependencieToEdit= dependencies.find((dependencie)=>dependencie.id==id);
-        Object.assign(dependencieToEdit,dependencie);
-        this.saveAllDependencies(dependencies);
-        return dependencie;
+    update: function(id,dependencieData){
+        console.log(`Updating dependencie ${dependencieData.name}`);
+        const allDependencies = this.findAll();
+        const dependencieToEdit = allDependencies.find(oneDependencie => oneDependencie.id === id);
+        Object.assign(dependencieToEdit,dependencieData);        
+        this.saveData(allDependencies);
+    },
+    
+    delete: function(id){
+        console.log(`Deleting Dependencie with id ${id}`);
+        const allDependencies = this.findAll();
+        const nonDeletedDependencies = allDependencies.filter(oneDependencie => oneDependencie.id !== id);
+        this.saveData(nonDeletedDependencies); 
     }
+
 }
 
-
-
 module.exports = dependencies;
-
-

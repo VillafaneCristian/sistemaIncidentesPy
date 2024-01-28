@@ -1,146 +1,32 @@
 [
-  {
-    "id": "e4b80ca3-21f2-4592-adb2-7146fff51a27",
-    "name": "Tribunal Oral en lo Penal Económico N°1",
-    "code": "PT1",
-    "subCode": "",
-    "email": "topenalec1asdasdasdasdasdas@pjn.gov.ar",
-    "floor": "6",
-    "side": "retiro"
-  },
-  {
-    "id": "2c7b4460-e129-4a12-8a7f-c2d6ef03e640",
-    "name": "Tribunal Oral en lo Penal Económico N°2",
-    "code": "PT2",
-    "subCode": "",
-    "email": "topenalec2@pjn.gov.ar",
-    "floor": "7",
-    "side": "rio"
-  },
-  {
-    "id": "3a37c606-ec7d-4a84-8811-b81ce3a52e17",
-    "name": "Tribunal Oral en lo Penal Económico N°3",
-    "code": "PT355555555555",
-    "subCode": "",
-    "email": "topenalec3@pjn.gov.ar",
-    "floor": "9",
-    "side": "retiro"
-  },
-  {
-    "id": "c1569c2d-8fb3-483d-931a-32c4f52edd59",
-    "name": "Tribunal Oral en lo Criminal Federal N°1",
-    "code": "FT1",
-    "subCode": "nueva",
-    "email": "tocrimfed1@pjn.gov.ar",
-    "floor": "9",
-    "side": "retiro"
-  },
-  {
-    "id": "af43bc75-059b-4714-bea0-a279b233e89a",
-    "name": "Tribunal Oral en lo Criminal Federal N°2",
-    "code": "FT2",
-    "subCode": "",
-    "email": "tocrimfed2@pjn.gov.ar",
-    "floor": "6",
-    "side": "retiro"
-  },
-  {
-    "id": "53dedfd1-991c-4b72-8b16-e2026cbeaa53",
-    "name": "Tribunal Oral en lo Criminal Federal N°3",
-    "code": "FT3",
-    "subCode": "",
-    "email": "tocrimfed3@pjn.gov.ar",
-    "floor": "7",
-    "side": "retiro"
-  },
-  {
-    "id": "a9270d65-6b49-463b-ba4c-a6b12bbe8f76",
-    "name": "Tribunal Oral en lo Criminal Federal N°4",
-    "code": "FT4",
-    "subCode": "",
-    "email": "tocrimfed4@pjn.gov.ar",
-    "floor": "6",
-    "side": "rio"
-  },
-  {
-    "id": "97ef495e-8091-4c20-bba3-1c6462dffb13",
-    "name": "Tribunal Oral en lo Criminal Federal N°5",
-    "code": "FT5",
-    "subCode": "",
-    "email": "tocrimfed5@pjn.gov.ar",
-    "floor": "6",
-    "side": "retiro"
-  },
-  {
-    "id": "594b09c7-3106-4478-af9e-f0812cbc6a0c",
-    "name": "Tribunal Oral en lo Criminal Federal N°6",
-    "code": "FT6",
-    "subCode": "",
-    "email": "tocrimfed6@pjn.gov.ar",
-    "floor": "6",
-    "side": "rio"
-  },
-  {
-    "id": "c67726c1-3d01-44fa-8e64-f2a106f9eba6",
-    "name": "Tribunal Oral en loCriminal Federal Nº8",
-    "code": "FT8",
-    "subCode": "",
-    "email": "tocrimfed8@pjn.gov.ar",
-    "floor": "6",
-    "side": "rio"
-  },
-  {
-    "id": "f01a8c6f-9495-4c17-938b-2e73a6551c03",
-    "name": "Tribunal Oral de Menores Nº1",
-    "code": "MT1",
-    "subCode": "",
-    "email": "tomenores1@pjn.gov.ar",
-    "floor": "7",
-    "side": "retiro"
-  },
-  {
-    "id": "c3d2296d-6db2-4c51-a69e-c4a79759e187",
-    "name": "Tribunal Oral de Menores Nº2",
-    "code": "MT2",
-    "subCode": "",
-    "email": "tomenores2@pjn.gov.ar",
-    "floor": "8",
-    "side": "retiro"
-  },
-  {
-    "id": "1154c0e2-9f59-458c-8bad-a67c61101108",
-    "name": "Tribunal Oral de Menores Nº3",
-    "code": "MT3",
-    "subCode": "",
-    "email": "tomenores3@pjn.gov.ar",
-    "floor": "8",
-    "side": "retiro"
-  },
-  {
-    "id": "e9018502-54bc-433c-9025-e54ac3772eec",
-    "name": "Juzgado Criminal y Correccional Federal N°1 - Secretaria N°1",
-    "code": "F01",
-    "subCode": "Sec1",
-    "email": "jncrimcorrfed1.sec1@pjn.gov.ar",
-    "floor": "3",
-    "side": "rio"
-  },
-  {
-    "id": "c7bbeff2-0461-4a3b-8697-379a4be6f910",
-    "name": "vocalia 1",
-    "code": "v01",
-    "subCode": "",
-    "email": "v01@pjn.gov.ar",
-    "floor": "9",
-    "side": "retiro"
-  },
-  {
-    "id": "7e70c460-5014-467b-bcc5-a3aebc51659c",
-    "name": "vocalia 2",
-    "code": "v02",
-    "subCode": "",
-    "email": "vocalia2@pjn.gov.ar",
-    "floor": "3",
-    "side": "retiro"
-  }
+ {
+  "id": "9843512b-12a0-4144-96bc-58951064c289",
+  "name": "Tribunal Oral de Menores Nº1",
+  "code": "MT1",
+  "subCode": "",
+  "email": "tomenores1@pjn.gov.ar",
+  "floor": "7",
+  "side": "retiro",
+  "observations": ""
+ },
+ {
+  "id": "b16dda9c-08ae-4b8c-b9c4-d016421ee1cf",
+  "name": "Tribunal Oral de Menores Nº3",
+  "code": "MT3",
+  "subCode": "",
+  "email": "tomenores3@pjn.gov.ar",
+  "floor": "8",
+  "side": "retiro",
+  "observations": "También hay una oficina en el 9no piso lado retiro. "
+ },
+ {
+  "id": "6ea4e015-6d06-4612-a9c9-a40607b22e51",
+  "name": "Tribunal Oral de Menores Nº2",
+  "code": "MT2",
+  "subCode": "",
+  "email": "tomenores2@pjn.gov.ar",
+  "floor": "8",
+  "side": "retiro",
+  "observations": "También hay una oficina en el 9no piso lado retiro. "
+ }
 ]

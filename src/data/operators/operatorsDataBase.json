@@ -1,0 +1,37 @@
+[
+ {
+  "id": "208a43da-4d6f-4f95-bb0c-007972f2bcc4",
+  "first_name": "Cristian",
+  "last_name": "Villafañe",
+  "cuil": "20318243655",
+  "email": "cristian.villafane@pjn.gov.ar",
+  "password": "$2a$10$psfhSO9ylUdUlVlGTwVZjeYHh2zWzDInsWYhIe4ZRpWREnBuo7wbe"
+ },
+ {
+  "id": "cb939c62-cc36-4eba-8a45-083aedbd041d",
+  "first_name": "Graciela",
+  "last_name": "Olivera",
+  "cuil": "27181628419",
+  "email": "graciela.olivera@pjn.gov.ar",
+  "password": "$2a$10$EoIgWFn11izZsY6.3f5j1.kF9iYJbJ/lIZSoOsCtnYU9z9YSA.Ema",
+  "avatar": "default-user.jpg"
+ },
+ {
+  "id": "a9327afd-0149-4bb9-8df6-b2ff5feed996",
+  "first_name": "Hector",
+  "last_name": "Campos",
+  "cuil": "20281234568",
+  "email": "hector.campos@pjn.gov.ar",
+  "password": "$2a$10$0TvbA/coYlCTPedDOI56pO5akSQS3OIAy8nCMNdJqJDggYoxy8CXO",
+  "avatar": "default-user.jpg"
+ },
+ {
+  "id": "ad4a2c59-edf8-46b0-a3b4-ef0c418895d8",
+  "first_name": "Brian",
+  "last_name": "Cespedez",
+  "cuil": "20111111113",
+  "email": "brian.cespedez@pjn.gov.ar",
+  "password": "$2a$10$PLmJewhNmo0/Xoa.1qDeN.caBstpwcngW7cfKNSO2fj5bbwNAijgS",
+  "avatar": "default-user.jpg"
+ }
+]

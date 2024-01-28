@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    margin: auto;
+    max-width: 1200px;
+}
+
+.login-image{
+    display: block;
+    width: 300px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.login-tittle{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-div{
+    max-width: 300px;
+    margin: auto;
+}
+

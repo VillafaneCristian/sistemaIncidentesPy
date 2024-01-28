@@ -1,20 +1,26 @@
 const db = require ('../data/db.js');
 
 const dependenciesServices = {
-    createDependencie: function(dependencie){
-        db.dependencies.create(dependencie);
+    storeDependencie: function(dependencie){
+        db.dependencies.store(dependencie);
     },
     getAllDependencies: function(){
-        return db.dependencies.findAllDependencies()
+        return db.dependencies.findAll()
     },
 
     getDependencieById: function(id){
-        return db.dependencies.findById(id);
+        return db.dependencies.findByPk(id);
     },
 
     updateDependencie: function(id,dependencie){
         db.dependencies.update(id,dependencie); 
+    },
+
+    deleteDependencie: function(id){
+        db.dependencies.delete(id);
     }
+
+
 }
 
 

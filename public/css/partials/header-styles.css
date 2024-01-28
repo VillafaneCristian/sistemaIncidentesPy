@@ -17,6 +17,10 @@
     display: none;
 }
 
+.header-topSection-operator img{
+    width: 60px;
+}
+
 .header-topSection-operator{
     display: none;
 }

@@ -10,8 +10,11 @@
                 <p>Edificio Comodoro Py 2002</p>
             </article>
             <article class="header-topSection-operator">
-                <p>Cristian Ezequiel Villafañe</p>
-                <button type="submit">SALIR</button>
+                <img src="/images/operators/default-image.jpg" alt="avatar">
+                <p>Hola, <%= locals.operatorLogged.first_name %> <%= locals.operatorLogged.last_name %> </p>
+                <form action="/operators/logout" method="post">
+                    <button type="submit">SALIR</button>
+                </form>
             </article>
         </section>
 

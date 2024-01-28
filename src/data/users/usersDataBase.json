@@ -1,0 +1,18 @@
+[
+ {
+  "id": "1f23a434-9230-4244-8742-c0cab5312024",
+  "first_name": "Mercedes",
+  "last_name": "Duradona",
+  "cuil": "27300000009",
+  "email": "mercedes.duradona@pjn.gov.ar",
+  "dependencie": "6ea4e015-6d06-4612-a9c9-a40607b22e51"
+ },
+ {
+  "id": "3387f7c0-b2c4-43cb-a73b-2d5af90f105d",
+  "first_name": "Lucas ",
+  "last_name": "Colombres",
+  "cuil": "20154556988",
+  "email": "lucas.colombres@pjn.gov.ar",
+  "dependencie": "b16dda9c-08ae-4b8c-b9c4-d016421ee1cf"
+ }
+]

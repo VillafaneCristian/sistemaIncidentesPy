@@ -9,13 +9,9 @@
         <%- include ('../partials/common-styles-links.ejs') %>
     <!---->
 
-    <link rel="stylesheet" href="/css/dependencies/dependencies-show-all-styles.css">
+    <link rel="stylesheet" href="/css/users/users-show-all-styles.css">
 
-    <!--SCRIPTS COMUNES A TODAS LAS SECCIONES DE LA APLICACION-->
-        <%- include ('../partials/common-script-links.ejs') %>
-    <!---->
-
-    <title>Listar Dependencias</title>
+    <title>Alta de usuario</title>
 </head>
 <body>
     <!--INICIO DEL HEADER-->
@@ -26,15 +22,18 @@
         <%- include ('../partials/shortcut.ejs') %>
     <!--FIN DE LA SECCION DE LOS ACCESOS DIRECTOS A FUNCIONALIDADES MAS USADAS-->
 
+    <!--SCRIPTS COMUNES A TODAS LAS SECCIONES DE LA APLICACION-->
+    <%- include ('../partials/common-script-links.ejs') %>
+    <!---->
+
     <main class="main">
-        
-        <h2 class="tittle">LISTADO DE TODAS LAS DEPENDENCIAS</h2>
+        <h1 class="tittle">LISTADO DE TODOS LOS USUARIOS</h1>
 
         <table>
             <thead>
                 <tr>
-                    <th class="table-column-Dependence">Dependencia</th>
-                    <th class="table-column-email">E-mail</th>
+                    <th>Nombre y Apellido</th>
+                    <th>Dependencia</th>
                     <th class="table-column-see">Ver</th>
                     <th class="table-column-edit">Editar</th>
                     <th class="table-column-delete">Eliminar</th>
@@ -42,20 +41,21 @@
             </thead>
 
             <tbody>
-                <% dependencies.forEach (dependencie => { %>
-                <tr> 
-                    <td class="table-column-Dependence"><%= dependencie.name %></td>
-                    <td class="table-column-email"><%= dependencie.email %></td>
-                    <td class="table-column-see"><a class="button-see" href="/dependencies/see/<%= dependencie.id%>"><i class="fa-solid fa-eye"></i></a></td>
-                    <td class="table-column-edit"><a class="button-edit" href="/dependencies/edit/<%= dependencie.id%>"><i class="fa-solid fa-pen-to-square"></i></a></td>
-                    <td class="table-column-delete">
-                        <form action="/dependencies/<%= dependencie.id %>?_method=delete" method="post">
+                <% users.forEach ((oneUser) => { %>
+                    <tr>
+                        <th><%= oneUser.first_name + ' ' + oneUser.last_name %></th>
+                        <th><%= oneUser.dependencie %></th>
+                        <td class="table-column-see"><a class="button-see" href=""><i class="fa-solid fa-eye"></i></a></td>
+                        <td class="table-column-edit"><a class="button-edit" href="/users/edit/<%= oneUser.id %>"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                        <td class="table-column-delete">
+                        <form action="/users/<%= oneUser.id %>?_method=delete" method="post">
                             <button class="button-delete"><i class="fa-solid fa-trash-can"></i></button>
                         </form>
                     </td>
-                </tr>
-            <% }) %>
-             </tbody>
+                    </tr>
+                <% }); %>
+
+            </tbody>
 
         </table>
 

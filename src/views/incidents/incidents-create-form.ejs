@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--ESTILOS COMUNES A TODAS LAS SECCIONES DE LA APLICACION-->
+        <%- include ('../partials/common-styles-links.ejs') %>
+    <!---->
+
+    <link rel="stylesheet" href="/css/dependencies/dependencies-create-form-styles.css">
+
+    <!--SCRIPTS COMUNES A TODAS LAS SECCIONES DE LA APLICACION-->
+        <%- include ('../partials/common-script-links.ejs') %>
+    <!---->
+    
+
+    <title>Alta de Incidente</title>
+</head>
+<body>
+    <!--INICIO DEL HEADER-->
+        <%- include ('../partials/header.ejs') %>
+    <!--FIN DEL HEADER-->
+
+    <!--INICIO DE LA SECCION DE LOS ACCESOS DIRECTOS A FUNCIONALIDADES MAS USADAS-->
+        <%- include ('../partials/shortcut.ejs') %>
+    <!--FIN DE LA SECCION DE LOS ACCESOS DIRECTOS A FUNCIONALIDADES MAS USADAS-->
+   
+    <main class="main">
+        <h2 class="tittle">ALTA DE INCIDENTE</h2>
+
+        <form action="/incidents/store" method="post">
+            <div class="form-div">
+                <label for="" class="form-label">Usuario:</label>
+                <select name="" id="" class="form-input">
+                    <option value="">Seleccione un usuario </option>
+                </select>    
+            </div>
+            <div class="form-div">
+                <label for="" class="form-label">Dependencia:</label>
+                <select name="" id="" class="form-input">
+                    <option value="">Seleccione una dependencia </option>
+                </select>
+            </div>
+            <div class="form-div">
+                <label for="" class="form-label">Tipo de equipamiento: </label>
+                <select name="" id="" class="form-input"> 
+                    <option value="">Seleccione tipo de equipamiento</option>
+                </select>
+            </div>
+            <div class="form-div">
+                <select name="" id="" class="form-input">
+                    <label for="" class="form-label">Marca</label>
+                    <option value="">Seleccione una Marca: </option>
+                </select>
+            </div>
+            <div class="form-div">
+                <select name="" id="" class="form-input">
+                    <label for="" class="form-label">Modelo</label>
+                    <option value="">Seleccione un Modelo: </option>
+                </select>
+            </div>
+            <div class="form-div">
+                <label for="" class="form-label">Numero de Serie: </label>
+                <input type="text" class="form-input">
+            </div>
+            <div class="form-div">
+                <label for="" class="form-label">Titulo del incidente: </label>
+                <input type="text" class="form-input">
+            </div>
+            <div class="form-div">
+                <label for="" class="form-label">Descripcion del Incidente: </label>
+                <textarea name="" id="" cols="30" rows="10" class="form-input"></textarea>
+            </div>
+            <div class="form-buttons">
+                <button type="submit">CREAR</button>
+                <button type="reset">BORRAR</button>
+            </div>
+
+
+        </form>
+    </main>
+
+    <!--INICIO DEL FOOTER-->
+        <%- include ('../partials/footer.ejs') %>
+    <!--FIN DEL FOOTER-->
+</body>
+</html>

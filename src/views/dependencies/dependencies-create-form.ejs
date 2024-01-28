@@ -33,11 +33,17 @@
         <form action="/dependencies/store" method="post">
             <div class="form-div">
                 <label for="name" class="form-label">Nombre: </label>
-                <input type="text" name="name" id="name" class="form-input">
+                <input type="text" name="name" id="name" class="form-input" value="<%= oldData ? oldData.name : '' %>">
+                <% if(errors && errors.name){ %> 
+                    <p class="errors-messageFormat"> <%= errors.name.msg %> </p>
+                <% } %>
             </div>
             <div class="form-div">
                 <label for="code" class="form-label">Código:</label>
-                <input type="text" name="code" id="code" class="form-input">
+                <input type="text" name="code" id="code" class="form-input" value="<%= oldData ? oldData.code : '' %>">
+                <% if(errors && errors.code){ %> 
+                    <p class="errors-messageFormat"> <%= errors.code.msg %> </p>
+                <% } %>
             </div>
             <div class="form-div">
                 <label for="sub-code" class="form-label">Sub-Código: </label>
@@ -45,31 +51,46 @@
             </div>
             <div class="form-div">
                 <label for="email" class="form-label">E-Mail:</label>
-                <input type="email" name="email" id="email" class="form-input">
+                <input type="email" name="email" id="email" class="form-input" value="<%= oldData ? oldData.email : '' %>">
+                <% if(errors && errors.email){ %> 
+                    <p class="errors-messageFormat"> <%= errors.email.msg %> </p>
+                <% } %>
             </div>
 
             <div class="form-div">
                 <label for="floor" class="form-label">Piso: </label>
                 <select name="floor" id="floor" class="form-input">
-                    <option value="-1">Subsuelo</option>
-                    <option value="0">Planta Baja</option>
-                    <option value="1">1er piso</option>
-                    <option value="2">2do piso</option>
-                    <option value="3">3er piso</option>
-                    <option value="4">4to piso</option>
-                    <option value="5">5to piso</option>
-                    <option value="6">6to piso</option>
-                    <option value="7">7mo piso</option>
-                    <option value="8">8vo piso</option>
-                    <option value="9">9no piso</option>
+                    <option value="">Seleccione una opción</option>
+                    <option value="-1" <%= oldData && oldData.floor === '-1' ? "selected" : "" %>>Subsuelo</option>
+                    <option value="0" <%= oldData && oldData.floor === '0' ? "selected" : "" %>>Planta Baja</option>
+                    <option value="1" <%= oldData && oldData.floor === '1' ? "selected" : "" %>>1er piso</option>
+                    <option value="2" <%= oldData && oldData.floor === '2' ? "selected" : "" %>>2do piso</option>
+                    <option value="3" <%= oldData && oldData.floor === '3' ? "selected" : "" %>>3er piso</option>
+                    <option value="4" <%= oldData && oldData.floor === '4' ? "selected" : "" %>>4to piso</option>
+                    <option value="5" <%= oldData && oldData.floor === '5' ? "selected" : "" %>>5to piso</option>
+                    <option value="6" <%= oldData && oldData.floor === '6' ? "selected" : "" %>>6to piso</option>
+                    <option value="7" <%= oldData && oldData.floor === '7' ? "selected" : "" %>>7mo piso</option>
+                    <option value="8" <%= oldData && oldData.floor === '8' ? "selected" : "" %>>8vo piso</option>
+                    <option value="9" <%= oldData && oldData.floor === '9' ? "selected" : "" %>>9no piso</option>
                 </select>
+                <% if(errors && errors.floor){ %> 
+                    <p class="errors-messageFormat"> <%= errors.floor.msg %> </p>
+                <% } %>
             </div>
             <div class="form-div">
                 <label for="side" class="form-label">Lado:</label>
                 <select name="side" id="side" class="form-input">
-                    <option value="rio">Río</option>
-                    <option value="retiro">Retiro</option>
+                    <option value="">Seleccione una opción</option>
+                    <option value="rio" <%= oldData && oldData.side === 'rio' ? "selected" : "" %>>Río</option>
+                    <option value="retiro" <%= oldData && oldData.side === 'retiro' ? "selected" : "" %>>Retiro</option>
                 </select>
+                <% if(errors && errors.side){ %> 
+                    <p class="errors-messageFormat"> <%= errors.side.msg %> </p>
+                <% } %>
+            </div>
+            <div class="form-div">
+                <label for="observations" class="form-label">Observaciones</label>
+                <textarea name="observations" id="" cols="30" rows="10" class="form-input"></textarea>
             </div>
             <div class="form-buttons">
                 <button type="submit">CREAR</button>

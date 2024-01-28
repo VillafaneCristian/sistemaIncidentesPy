@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!--ESTILOS COMUNES A TODAS LAS SECCIONES DE LA APLICACION-->
+        <%- include ('../partials/common-styles-links.ejs') %>
+    <!---->
+
+    <link rel="stylesheet" href="/css/form-styles/form-styles.css">
+    <link rel="stylesheet" href="/css/login/login-styles.css">
+
+</head>
+<main class="main">
+    <img class="login-image" src="/images/login/login-image.jpg" alt="Logo">
+    <h2 class="login-tittle">ACCESO AL SISTEMA</h2>
+    <form action="/operators/login" method="post">
+        <div class="form-div">
+            <label class="form-label" for="cuil">INGRESE CUIL:</label>
+            <input class="form-input" type="text" name="cuil" id="cuil" value="<%= oldData ? oldData.cuil : '' %>">
+            <% if (errors && errors.cuil) { %>
+                <p class="errors-messageFormat"> <%= errors.cuil.msg %> </p>                
+            <% } %>
+        </div>
+        <div class="form-div">
+            <label class="form-label" for="password">INGRESE CONTASEÑA:</label>
+            <input class="form-input" type="password" name="password" id="password">
+            <% if (errors && errors.password) { %>
+                <p class="errors-messageFormat"> <%= errors.password.msg %> </p>                
+            <% } %>
+        </div>
+        <div class="form-buttons">
+            <button>INGRESAR</button>
+        </div>
+    </form>
+</main>
+<body>
+    
+</body>
+</html>

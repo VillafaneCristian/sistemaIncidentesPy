@@ -28,28 +28,52 @@
 
     <main class="main">
         <h2 class="tittle">ALTA DE USUARIO</h2>
-        <form action="">
+        <form action="/users/store" method="post">
             <div class="form-div">
                 <label for="last_name" class="form-label">Nombre: </label>
-                <input type="text" name="first_name" id="first_name" class="form-input">
+                <input type="text" name="first_name" id="first_name" class="form-input"
+                value="<%= oldData ? oldData.first_name : '' %>">
+                <% if (errors && errors.first_name) { %>
+                    <p class="errors-messageFormat"> <%= errors.first_name.msg %> </p>
+                <% } %>
             </div>
             <div class="form-div">
                 <label for="last_name" class="form-label">Apellido: </label>
-                <input type="text" name="last_name" id="last_name" class="form-input">
+                <input type="text" name="last_name" id="last_name" class="form-input"
+                value="<%= oldData ? oldData.last_name : '' %>">
+                <% if (errors && errors.last_name) { %>
+                    <p class="errors-messageFormat"> <%= errors.last_name.msg %> </p>
+                <% } %>
             </div>
             <div class="form-div">
                 <label for="cuil" class="form-label">CUIL:</label>
-                <input type="text" name="cuil" id="cuil" class="form-input">
+                <input type="text" name="cuil" id="cuil" class="form-input"
+                value="<%= oldData ? oldData.cuil : '' %>">
+                <% if (errors && errors.cuil) { %>
+                    <p class="errors-messageFormat"> <%= errors.cuil.msg %> </p>
+                <% } %>
             </div>
             <div class="form-div">
                 <label for="email" class="form-label">E-Mail</label>
-                <input type="text" name="email" id="email" class="form-input">
+                <input type="text" name="email" id="email" class="form-input"
+                value="<%= oldData ? oldData.email : '' %>">
+                <% if (errors && errors.email) { %>
+                    <p class="errors-messageFormat"> <%= errors.email.msg %> </p>
+                <% } %>
             </div>
             <div class="form-div">
                 <label for="dependencie" class="form-label">Dependencia:</label>
                 <select name="dependencie" id="dependencie" class="form-input">
-                    <option value="juz1">Juzgado 1</option>
+                    <option value="">Elija una opción</option>
+                    <% allDependencies.forEach(oneDependencie => { %>
+                        <option value="<%= oneDependencie.id %>" 
+                         <%= oldData && oldData.dependencie === oneDependencie.id ? "selected" : '' %>     
+                        > <%= oneDependencie.name %> </option>
+                    <% }); %>
                 </select>
+                <% if (errors && errors.dependencie) { %>
+                    <p class="errors-messageFormat"> <%= errors.dependencie.msg %> </p>
+                <% } %>
             </div>
             <div class="form-buttons">
                 <button type="submit">CREAR</button>

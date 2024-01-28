@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+
+table{
+    width: 90%;
+    margin: auto;
+}
+
+td, th{
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #00A9FF;
+}
+
+.button-edit, .button-see{
+    color: #00A9FF;
+    font-size: 25px;
+}
+
+.button-delete{
+    background-color: #FFFFFF;
+    color: #00A9FF;
+    font-size: 25px;
+}
