@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--ESTILOS COMUNES A TODAS LAS SECCIONES DE LA APLICACION-->
+        <%- include ('../partials/common-styles-links.ejs') %>
+    <!---->
+
+    <link rel="stylesheet" href="/css/incidents/incident-stateOpenList-styles.css">
+
+    <!--SCRIPTS COMUNES A TODAS LAS SECCIONES DE LA APLICACION-->
+        <%- include ('../partials/common-script-links.ejs') %>
+    <!---->
+    
+
+    <title>Alta de Incidente</title>
+</head>
+<body>
+    <!--INICIO DEL HEADER-->
+        <%- include ('../partials/header.ejs') %>
+    <!--FIN DEL HEADER-->
+
+    <!--INICIO DE LA SECCION DE LOS ACCESOS DIRECTOS A FUNCIONALIDADES MAS USADAS-->
+        <%- include ('../partials/shortcut.ejs') %>
+    <!--FIN DE LA SECCION DE LOS ACCESOS DIRECTOS A FUNCIONALIDADES MAS USADAS-->
+   
+    <main class="main">
+        <h2 class="tittle">INCIDENTES ABIERTOS</h2>
+
+        <h3>Incidentes abiertos de: <%= locals.operatorLogged.first_name %> <%= locals.operatorLogged.last_name %></h3>
+
+      
+            
+            <table class="incidetn_subTable">
+            <thead>
+                <tr>
+                    <th>Nº Incidente</th>
+                    <th>Usuario</th>
+                    <th>Dependencia</th>
+                    <th>Título</th>
+                    <th class="table-column-see">Ver</th>
+                    <th class="table-column-edit">Editar</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <% incidentsStateOpenForOperator.forEach((oneIncident) => { %>
+                    <tr>
+                        <td><%= oneIncident.id %></td>
+                        <td><%= oneIncident.user %> </td>
+                        <td><%= oneIncident.dependencie %></td>
+                        <td><%= oneIncident.tittle %></td>
+                        <td class="table-column-see"><a class="button-see" href=""><i class="fa-solid fa-eye"></i></a></td>
+                        <td class="table-column-edit"><a class="button-edit" href="/incidents/edit/<%= oneIncident.id %>"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                    </tr>
+
+                <% }) %>
+                      
+            </tbody>
+       
+             </table>
+    
+    
+
+        <h3>Incidentes abiertos en TALLER </h3>
+
+        <table class="incidetn_subTable">
+            <thead>
+                <tr>
+                    <th>Nº Incidente</th>
+                    <th>Usuario</th>
+                    <th>Dependencia</th>
+                    <th>Título</th>
+                    <th class="table-column-see">Ver</th>
+                    <th class="table-column-edit">Editar</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <% incidentsStateOpenForTaller.forEach((oneIncident) => { %>
+                    <tr>
+                        <td><%= oneIncident.id %></td>
+                        <td><%= oneIncident.user %> </td>
+                        <td><%= oneIncident.dependencie %></td>
+                        <td><%= oneIncident.tittle %></td>
+                        <td class="table-column-see"><a class="button-see" href=""><i class="fa-solid fa-eye"></i></a></td>
+                        <td class="table-column-edit"><a class="button-edit" href="/incidents/edit/<%= oneIncident.id %>"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                    </tr>
+
+                <% }) %>
+            </tbody>
+        </table>
+
+
+        <h3>Prestamos en proceso: </h3>
+
+        <table class="incidetn_subTable">
+            <thead>
+                <tr>
+                    <th>Nº Incidente</th>
+                    <th>Usuario</th>
+                    <th>Dependencia</th>
+                    <th>Título</th>
+                    <th class="table-column-see">Ver</th>
+                    <th class="table-column-edit">Editar</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <% incidentsStateOpenForPrestamo.forEach((oneIncident) => { %>
+                    <tr>
+                        <td><%= oneIncident.id %></td>
+                        <td><%= oneIncident.user %> </td>
+                        <td><%= oneIncident.dependencie %></td>
+                        <td><%= oneIncident.tittle %></td>
+                        <td class="table-column-see"><a class="button-see" href=""><i class="fa-solid fa-eye"></i></a></td>
+                        <td class="table-column-edit"><a class="button-edit" href="/incidents/edit/<%= oneIncident.id %>"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                    </tr>
+
+                <% }) %>
+            </tbody>
+        </table>
+
+    </main>
+
+    <!--INICIO DEL FOOTER-->
+        <%- include ('../partials/footer.ejs') %>
+    <!--FIN DEL FOOTER-->
+</body>
+</html>

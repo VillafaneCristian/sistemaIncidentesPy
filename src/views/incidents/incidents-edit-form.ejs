@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--ESTILOS COMUNES A TODAS LAS SECCIONES DE LA APLICACION-->
+        <%- include ('../partials/common-styles-links.ejs') %>
+    <!---->
+
+    <link rel="stylesheet" href="/css/dependencies/dependencies-create-form-styles.css">
+
+    <!--SCRIPTS COMUNES A TODAS LAS SECCIONES DE LA APLICACION-->
+        <%- include ('../partials/common-script-links.ejs') %>
+    <!---->
+    
+
+    <title>Alta de Incidente</title>
+</head>
+<body>
+    <!--INICIO DEL HEADER-->
+        <%- include ('../partials/header.ejs') %>
+    <!--FIN DEL HEADER-->
+
+    <!--INICIO DE LA SECCION DE LOS ACCESOS DIRECTOS A FUNCIONALIDADES MAS USADAS-->
+        <%- include ('../partials/shortcut.ejs') %>
+    <!--FIN DE LA SECCION DE LOS ACCESOS DIRECTOS A FUNCIONALIDADES MAS USADAS-->
+   
+    <main class="main">
+        <h2 class="tittle">EDITANDO EL INCIDENTE Nº <%= incident.id %> </h2>
+
+        <form action="/incidents/<%= incident.id %>?_method=put" method="post">
+            <div class="form-div">
+                <label for="user" class="form-label">Usuario:</label>
+                <p class="form-input"> <%= incident.user %> </p>
+            </div>
+            <div class="form-div">
+                <label for="dependencie" class="form-label">Dependencia:</label>
+                <p class="form-input" > <%= incident.dependencie %></p>
+            </div>
+            <div class="form-div">
+                <label for="equipment_kind" class="form-label">Tipo de equipamiento: </label>
+                <p class="form-input"> <%= incident.equipment_kind %></p>
+            </div>
+            <div class="form-div">
+                <label for="equipment_mark" class="form-label">Marca</label>
+                <p class="form-input"> <%= incident.equipment_mark %></p>
+                
+            </div>
+            <div class="form-div">
+                <label for="equipment_model" class="form-label">Modelo</label>
+                <p class="form-input"> <%= incident.equipment_model %></p>
+            </div>
+            <div class="form-div">
+                <label for="serial_number" class="form-label">Numero de Serie: </label>
+                <input type="text" class="form-input" name="serial_number" id="serial_number" value="<%= incident.serial_number %>">
+            </div>
+            <div class="form-div">
+                <label for="tittle" class="form-label">Titulo del incidente: </label>
+                <p class="form-input"> <%= incident.equipment_model %></p>
+            </div>
+            <div class="form-div">
+                <label for="description" class="form-label">Descripcion del Incidente: </label>
+                <p class="form-input"> <%= incident.description %></p>
+            </div>
+            <div class="form-div">
+                <label for="progress" class="form-label">Comentarios </label>
+                <textarea name="progress" id="progress" cols="30" rows="10" class="form-input"> <%= incident.progress %> </textarea>
+            </div>
+
+            <div class="form-div">
+                <label for="" class="form-label">Asignar a: </label>
+                <select name="operatorAsigned" id="operatorAsigned" class="form-input">
+                    <option value="taller">Taller</option>
+                    <option value="prestamo">Prestamo</option>
+                    <option value="20318243655">Cristian Villfañe</option>
+
+                </select>
+            </div>
+            
+            <div class="form-buttons">
+                <button type="submit">GUARDAR</button>
+                <button type="reset">BORRAR</button>
+            </div>
+
+        </form>
+    </main>
+
+    <!--INICIO DEL FOOTER-->
+        <%- include ('../partials/footer.ejs') %>
+    <!--FIN DEL FOOTER-->
+</body>
+</html>

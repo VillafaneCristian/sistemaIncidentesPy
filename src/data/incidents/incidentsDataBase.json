@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "operatorCreator": "20318243655",
+    "operatorAsigned": "27181628419",
+    "state": "open",
+    "user": "Lucas Colombres",
+    "dependencie": "Juzgado 2",
+    "equipment_kind": "desktop",
+    "equipment_mark": "lenovo",
+    "equipment_model": "9485-A21",
+    "serial_number": "LKPK4561",
+    "tittle": "No enciende",
+    "description": "El usuario no informa que la pc no enciende",
+    "progress": "   hola hola "
+  },
+  {
+    "id": 2,
+    "operatorCreator": "20318243655",
+    "operatorAsigned": "20318243655",
+    "state": "open",
+    "user": "Marcos Tedin",
+    "dependencie": "Juzgado 5",
+    "equipment_kind": "scaner",
+    "equipment_mark": "alaris",
+    "equipment_model": "2040",
+    "serial_number": "456987",
+    "tittle": "No toma el papel",
+    "description": "El usuario nos informa que el escaner no se lleva las hojas",
+    "progress": "     hola hola \r\n\r\nnuevo cometario  \r\n\r\nse carga otro comentario       "
+  },
+  {
+    "id": 3,
+    "operatorCreator": "20318243655",
+    "operatorAsigned": "prestamo",
+    "state": "open",
+    "user": "Marcos Tedin",
+    "dependencie": "Juzgado 5",
+    "equipment_kind": "scaner",
+    "equipment_mark": "alaris",
+    "equipment_model": "2040",
+    "serial_number": "456987",
+    "tittle": "se presta notebook",
+    "description": "se presta al fed 9",
+    "progress": ""
+  }
+]

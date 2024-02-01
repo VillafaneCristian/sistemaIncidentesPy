@@ -32,46 +32,81 @@
 
         <form action="/incidents/store" method="post">
             <div class="form-div">
-                <label for="" class="form-label">Usuario:</label>
-                <select name="" id="" class="form-input">
+                <label for="user" class="form-label">Usuario:</label>
+                <select name="user" id="user" class="form-input">
                     <option value="">Seleccione un usuario </option>
+                    <option value="Lucas Colombres">Lucas Colombres</option>
+                    <option value="Mercedes Lopez">Mercedes Lopez</option>
+                    <option value="Marcos Tedin">Marcos Tedin</option>
+                    <option value="Laura Vera">Laura Vera</option>
                 </select>    
             </div>
             <div class="form-div">
-                <label for="" class="form-label">Dependencia:</label>
-                <select name="" id="" class="form-input">
+                <label for="dependencie" class="form-label">Dependencia:</label>
+                <select name="dependencie" id="dependencie" class="form-input">
                     <option value="">Seleccione una dependencia </option>
+                    <option value="Juzgado 1">Juzgado 1</option>
+                    <option value="Juzgado 2">Juzgado 2</option>
+                    <option value="Juzgado 3">Juzgado 3</option>
+                    <option value="Juzgado 4">Juzgado 4</option>
+                    <option value="Juzgado 5">Juzgado 5</option>
+                    <option value="Juzgado 6">Juzgado 6</option>
+                    <option value="Juzgado 7">Juzgado 7</option>
+                    <option value="Juzgado 8">Juzgado 8</option>
+                    <option value="Juzgado 9">Juzgado 9</option>
+                    <option value="Juzgado 10">Juzgado 10</option>
+                    <option value="Juzgado 11">Juzgado 11</option>
+                    <option value="Juzgado 12">Juzgado 12</option>
                 </select>
             </div>
             <div class="form-div">
-                <label for="" class="form-label">Tipo de equipamiento: </label>
-                <select name="" id="" class="form-input"> 
+                <label for="equipment_kind" class="form-label">Tipo de equipamiento: </label>
+                <select name="equipment_kind" id="equipment_kind" class="form-input"> 
                     <option value="">Seleccione tipo de equipamiento</option>
+                    <option value="desktop">Desktop</option>
+                    <option value="laptop">Laptop</option>
+                    <option value="printer">Impresora</option>
+                    <option value="scaner">Escaner</option>
                 </select>
             </div>
             <div class="form-div">
-                <select name="" id="" class="form-input">
-                    <label for="" class="form-label">Marca</label>
+                <select name="equipment_mark" id="equipment_mark" class="form-input">
+                    <label for="equipment_mark" class="form-label">Marca</label>
                     <option value="">Seleccione una Marca: </option>
+                    <option value="lenovo">Lenovo</option>
+                    <option value="bangho">Bangho</option>
+                    <option value="Lexmark">Lexmark</option>
+                    <option value="Oki">OKI</option>
+                    <option value="HP">HP</option>
+                    <option value="sansei">Sansei</option>
+                    <option value="alaris">Alaris</option>
+                    <option value="canon">Canon</option>
                 </select>
             </div>
             <div class="form-div">
-                <select name="" id="" class="form-input">
-                    <label for="" class="form-label">Modelo</label>
+                <select name="equipment_model" id="equipment_model" class="form-input">
+                    <label for="equipment_model" class="form-label">Modelo</label>
                     <option value="">Seleccione un Modelo: </option>
+                    <option value="610">610</option>
+                    <option value="421">421</option>
+                    <option value="4172">4172</option>
+                    <option value="OptimaT4">Optima T4</option>
+                    <option value="9485-A21">9485-A21</option>
+                    <option value="AIO">AIO</option>
+                    <option value="2040">2040</option>
                 </select>
             </div>
             <div class="form-div">
-                <label for="" class="form-label">Numero de Serie: </label>
-                <input type="text" class="form-input">
+                <label for="serial_number" class="form-label">Numero de Serie: </label>
+                <input type="text" class="form-input" name="serial_number" id="serial_number">
             </div>
             <div class="form-div">
-                <label for="" class="form-label">Titulo del incidente: </label>
-                <input type="text" class="form-input">
+                <label for="tittle" class="form-label">Titulo del incidente: </label>
+                <input type="text" class="form-input" name="tittle" id="tittle">
             </div>
             <div class="form-div">
-                <label for="" class="form-label">Descripcion del Incidente: </label>
-                <textarea name="" id="" cols="30" rows="10" class="form-input"></textarea>
+                <label for="description" class="form-label">Descripcion del Incidente: </label>
+                <textarea name="description" id="description" cols="30" rows="10" class="form-input"></textarea>
             </div>
             <div class="form-buttons">
                 <button type="submit">CREAR</button>

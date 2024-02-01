@@ -41,7 +41,7 @@ const operatorsControllers = {
     },
 
     loginProcess: function(req,res){   
-        res.redirect('/');
+        res.redirect('/incidents/stateopenlist');
     }, 
 
     logout: function (req,res){

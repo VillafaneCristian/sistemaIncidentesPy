@@ -58,6 +58,7 @@ const operators = {
 
 }
 
+//console.log(operators.generateId());
 
 module.exports = operators; 
 
